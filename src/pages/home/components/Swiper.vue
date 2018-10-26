@@ -37,8 +37,9 @@ export default {
     box-sizing border-box
     width 100%
     height 0
-    padding-bottom 31.25%
+    padding-bottom 35.25%
     background #eee
     .swiper-img
       width 100%
+      height 100%;
 </style>
