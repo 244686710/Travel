@@ -81,6 +81,7 @@ export default {
 
 <style lang="stylus" scoped>
 .icons
+  margin-top .1rem
   height 0
   overflow hidden
   padding-bottom 50%
