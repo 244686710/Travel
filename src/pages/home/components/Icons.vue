@@ -1,8 +1,12 @@
 <template>
   <div class="icons">
     <swiper>
-      <swiper-slide>
-        <div class="icon" v-for="item in iconsList" :key="item.id">
+      <swiper-slide v-for="(page, index) in pages" :key="index">
+        <div
+          class="icon"
+          v-for="item in page"
+          :key="item.id"
+        >
           <div class="icon-img">
             <img class="icon-img-content" :src="item.imgURL" alt=""/>
           </div>
@@ -51,8 +55,25 @@ export default {
           id: '0008',
           imgURL: 'http://img1.qunarzz.com/piao/fusion/1803/12/216ce2e78b5f5f02.png',
           desc: '万圣狂欢'
+        }, {
+          id: '0009',
+          imgURL: 'http://img1.qunarzz.com/piao/fusion/1803/12/216ce2e78b5f5f02.png',
+          desc: '万圣狂欢'
         }
       ]
+    }
+  },
+  computed: {
+    pages () {
+      const pages = []
+      this.iconsList.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
     }
   }
 }
