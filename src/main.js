@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import 'styles/reset.css'
 import 'styles/iconfont.css'
+// import 'styles/themes/green.styl'
+// import 'styles/themes/red.styl'
+// import 'styles/themes/yellow.styl'
 
 // require styles
 import 'swiper/dist/css/swiper.css'
